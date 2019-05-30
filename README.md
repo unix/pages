@@ -2,11 +2,11 @@
 
 <br/>
 
-## show pages for you
+# show pages for you
 
 > You have a README.md, and have a pages.
 
-> https://pages.now.sh/{your_name}/{repo_name}
+> `https://pages.now.sh/{your_name}/{repo_name}`
 
 **dark mode**: append `?dark=1`.
 
@@ -14,9 +14,9 @@
 
 ## demos
   
-  - my project `done`: https://pages.now.sh/wittbulter/done
+  - my project: https://pages.now.sh/wittbulter/done
   - facebook react: https://pages.now.sh/facebook/react
-  - dark: https://github.com/WittBulter/koa2-typescript-guide?dark=1
+  - dark: https://pages.now.sh/wittbulter/koa2-typescript-guide?dark=1
   
 <br/>
 
