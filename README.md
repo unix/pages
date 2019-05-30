@@ -1,12 +1,10 @@
-![pages](pages.png)
+<img src="pages.png" width="500">
 
 <br/>
 
 # show pages
 
-> You have a README.md, and have a pages.
-
-> `https://pages.now.sh/{your_name}/{repo_name}`
+You `README.md` is home pages. try url: `https://pages.now.sh/{your_name}/{repo_name}`.
 
 **dark mode**: append `?dark=1`.
 
@@ -25,6 +23,6 @@
 ## styles
 ui from [zeit-style](https://github.com/zeit-ui/zeit-style), originating from [Zeit Design](https://zeit.co/design).
 
-## LICENSE
+## license
 [MIT](LICENSE)
 
