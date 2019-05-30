@@ -8,6 +8,8 @@ You `README.md` is home pages. try url: `https://pages.now.sh/{your_name}/{repo_
 
 **dark mode**: append `?dark=1`.
 
+**tect-center**: append `?center=1`
+
 **alias**: just point your domain `cname` to link.
 
 <br/>

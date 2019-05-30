@@ -4,7 +4,9 @@ const getQuery = (url) => {
   if (!url.includes('?')) return { url }
   const [native, query] = url.split('?')
   if (!query.includes('=')) return { url: native }
-  return { url: native, dark: true }
+  const isDark = query.includes('dark')
+  const isCenter = query.includes('center')
+  return { url: native, dark: isDark, center: isCenter }
 }
 
 const getFilePath = (url) => {
@@ -31,7 +33,7 @@ const getContent = async filePath => {
   return await (await fetch(filePath)).text()
 }
 
-const translate = async (content, url, isDark = false) => {
+const translate = async (content, url, isDark = false, isCenter = false) => {
   const { git, name } = getRepoMessage(url)
   const hostname = `${git}/raw/master/`
   const md = require('markdown-it')({
@@ -43,8 +45,8 @@ const translate = async (content, url, isDark = false) => {
   }).use(require('markdown-it-replace-link'))
   return `<html class="${isDark ? 'zi-dark-theme' : ''}"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>${name}</title><link rel="dns-prefetch" href="//pages.now.sh">
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@zeit-ui/style@0.8.6/dist/style.css"><link rel="icon" href="favicon.ico"></head>
-<body><div class="zi-layout zi-main">${md.render(content)}<hr>This project is open-sourced on <a href="${git}">GitHub</a>.</div></body></html>`
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@zeit-ui/style@0.9.1/dist/style.css"><link rel="icon" href="favicon.ico"></head>
+<body><div class="zi-layout zi-main ${isCenter ? 'zi-center' : ''}">${md.render(content)}<hr>This project is open-sourced on <a href="${git}">GitHub</a>.</div></body></html>`
 }
 
 module.exports = {
