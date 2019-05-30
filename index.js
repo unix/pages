@@ -3,7 +3,7 @@ const pages = require('./pages')
 module.exports = async (req, res) => {
   res.setHeader('Access-Control-Allow-Origin', '*')
   if (req.url === '/') {
-    req.url = '/wittbulter/pages?center=1&dark=1'
+    req.url = '/wittbulter/pages'
   }
   
   if (!/(\/|=)[a-zA-Z0-9]+$/.test(req.url)) return ''

@@ -1,4 +1,4 @@
-<img src="pages.png" width="500">
+![](pages.png)
 
 <br/>
 
