@@ -25,6 +25,8 @@ Your `README.md` is home pages. try url: `https://pages.now.sh/{your_name}/{repo
 ## styles
 ui from [zeit-style](https://github.com/zeit-ui/zeit-style), originating from [Zeit Design](https://zeit.co/design).
 
+<br/>
+
 ## license
 [MIT](LICENSE)
 
