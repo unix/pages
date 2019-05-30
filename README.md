@@ -4,7 +4,7 @@
 
 # show pages
 
-You `README.md` is home pages. try url: `https://pages.now.sh/{your_name}/{repo_name}`.
+Your `README.md` is home pages. try url: `https://pages.now.sh/{your_name}/{repo_name}`.
 
 **dark mode**: append `?dark=1`.
 
