@@ -1,0 +1,16 @@
+{
+  "name": "pages",
+  "version": 2,
+  "alias": "pages",
+  "regions": ["sin1"],
+  "github": {
+    "enabled": false
+  },
+  "builds": [
+    { "src": "*.js", "use": "now-micro" }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "/index.js" },
+    { "src": "/favicon.ico", "dest": "/favicon.ico" }
+  ]
+}

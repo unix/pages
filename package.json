@@ -1,0 +1,20 @@
+{
+  "name": "pages",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "micro-dev",
+    "micro": "micro"
+  },
+  "dependencies": {
+    "markdown-it": "^8.4.2",
+    "markdown-it-replace-link": "^1.0.1",
+    "marked": "^0.6.2",
+    "micro": "^9.3.4",
+    "node-fetch": "^2.6.0"
+  },
+  "devDependencies": {
+    "micro-dev": "^3.0.0"
+  }
+}
