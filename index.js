@@ -5,8 +5,7 @@ module.exports = async (req, res) => {
   if (req.url === '/') {
     req.url = '/wittbulter/pages'
   }
-  
-  if (!/(\/|=)[a-zA-Z0-9]+$/.test(req.url)) return ''
+  if (!/([\/|=-])[a-zA-Z0-9]+$/.test(req.url)) return ''
   const { url, dark, center } = pages.getQuery(req.url)
   
   const mdPath = pages.getFilePath(url)

@@ -30,7 +30,7 @@ const hasFile = async filePath => {
 }
 
 const getContent = async filePath => {
-  return await (await fetch(filePath)).text()
+  return await (await fetch(`${filePath}?t${Date.now()}`)).text()
 }
 
 const translate = async (content, url, isDark = false, isCenter = false) => {
