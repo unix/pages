@@ -1,0 +1,17 @@
+
+version: 2
+jobs:
+  build:
+    working_directory: ~/repo
+    docker:
+      - image: circleci/node:latest
+    steps:
+      - checkout
+      - restore_cache:
+          key: v2-dependencies-{{ checksum "yarn.lock" }}
+      - run: yarn
+      - save_cache:
+          key: v2-dependencies-{{ checksum "yarn.lock" }}
+          paths:
+            - ./node_modules
+      - run: yarn lint
