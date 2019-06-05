@@ -1,6 +1,6 @@
 const fetch = require('node-fetch')
 
-const getQuery = (url) => {
+const getQuery = url => {
   if (!url.includes('?')) return { url }
   const [native, query] = url.split('?')
   if (!query.includes('=')) return { url: native }
@@ -9,11 +9,11 @@ const getQuery = (url) => {
   return { url: native, dark: isDark, center: isCenter }
 }
 
-const getFilePath = (url) => {
+const getFilePath = url => {
   return `https://raw.githubusercontent.com${url}/master/README.md`
 }
 
-const getRepoMessage = (url) => {
+const getRepoMessage = url => {
   return {
     git: `https://github.com${url}`,
     name: url.split('/').reverse()[0] || '',
@@ -24,13 +24,13 @@ const hasFile = async filePath => {
   try {
     const res = await fetch(filePath, { method: 'HEAD' })
     return res && res.status === 200
-  } catch (e) {
+  } catch (error) {
     return false
   }
 }
 
 const getContent = async filePath => {
-  return await (await fetch(`${filePath}?t${Date.now()}`)).text()
+  return (await fetch(`${filePath}?t${Date.now()}`)).text()
 }
 
 const translate = async (content, url, isDark = false, isCenter = false) => {
@@ -41,7 +41,7 @@ const translate = async (content, url, isDark = false, isCenter = false) => {
     replaceLink: filename => {
       if (/http/.test(filename)) return filename
       return `${hostname}${filename}`
-    }
+    },
   }).use(require('markdown-it-replace-link'))
   return `<html class="${isDark ? 'zi-dark-theme' : ''}"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>${name}</title><link rel="dns-prefetch" href="//pages.now.sh">
