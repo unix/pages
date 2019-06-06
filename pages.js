@@ -46,7 +46,10 @@ const translate = async (content, url, isDark = false, isCenter = false) => {
   return `<html class="${isDark ? 'zi-dark-theme' : ''}"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>${name}</title><link rel="dns-prefetch" href="//pages.now.sh">
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@zeit-ui/style@0.9.1/dist/style.css"><link rel="icon" href="favicon.ico"></head>
-<body><div class="zi-layout zi-main ${isCenter ? 'zi-center' : ''}">${md.render(content)}<hr>This project is open-sourced on <a href="${git}">GitHub</a>.</div></body></html>`
+<body><div class="zi-layout zi-main ${isCenter ? 'zi-center' : ''}">${md.render(content)}<hr>This project is open-sourced on <a href="${git}">GitHub</a>.</div>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-110371817-6" async></script>
+<script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-110371817-6');</script>
+</body></html>`
 }
 
 module.exports = {
