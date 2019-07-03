@@ -16,9 +16,9 @@ Your `README.md` is home pages. try url: `https://pages.now.sh/{your_name}/{repo
 
 ## demos
   
-  - my project: https://pages.now.sh/wittbulter/done
+  - my project: https://pages.now.sh/unix/done
   - facebook react: https://pages.now.sh/facebook/react
-  - dark: https://pages.now.sh/wittbulter/koa2-typescript-guide?dark=1
+  - dark: https://pages.now.sh/unix/koa2-typescript-guide?dark=1
   
 <br/>
 
